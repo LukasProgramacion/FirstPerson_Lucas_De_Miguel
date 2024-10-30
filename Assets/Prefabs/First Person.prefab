@@ -35,7 +35,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6496880854469029259}
-  - {fileID: 6969852900148593911}
   - {fileID: 1281609595706722990}
   m_Father: {fileID: 160611791772872853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -102,6 +101,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadMovimiento: 5
+  escalaGravedad: 0
+  alturaSalto: 0
+  pies: {fileID: 0}
+  radioDeteccion: 0
+  queEsSuelo:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &254872745812683364
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -251,13 +257,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744964272045038447}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.13800001, y: -0.37, z: -0.07080269}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 838671552128041002}
-  m_Father: {fileID: 7563283414051882135}
+  m_Father: {fileID: 160611791772872853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2142045282227520549
 GameObject:
@@ -289,6 +295,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4888345660261592141}
+  - {fileID: 6969852900148593911}
   - {fileID: 7563283414051882135}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
