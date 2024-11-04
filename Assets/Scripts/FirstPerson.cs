@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FirstPerson : MonoBehaviour
 {
+
+    [SerializeField] private float vidas; 
     
     [SerializeField] private float velocidadMovimiento;
     
@@ -93,6 +95,16 @@ public class FirstPerson : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(pies.position, radioDeteccion);
+    }
+
+    public void RecibirDanho(float recibirDanho)
+    {
+        vidas -= recibirDanho;
+
+        if(vidas <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,11 +11,27 @@ public class Enemigo : MonoBehaviour
 
     private FirstPerson player;
     // Start is called before the first frame update
+
+    private Animator anim;
+
+    private bool ventanaAbierta;
+
+    [SerializeField] private float danhoAtaque;
+
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private float radioAtaque;
+    [SerializeField] private LayerMask queEsDanhable;
+    private bool danhoRealizado;
+
+
+    
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
 
         player = GameObject.FindObjectOfType<FirstPerson>();
+
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,5 +39,56 @@ public class Enemigo : MonoBehaviour
     {
         //Tengo que definir como destino la posicion del player
         agent.SetDestination(player.transform.position);
+
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            agent.isStopped = true;
+            anim.SetBool("Atacking", true);
+        }
+
+        if (ventanaAbierta && danhoRealizado == false)
+        {
+            DetectarJugador();
+        }
+        
     }
+
+    
+    private void DetectarJugador()
+    {
+        Collider[] collsDetectados = Physics.OverlapSphere(attackPoint.position, radioAtaque, queEsDanhable);  
+        
+        if (collsDetectados.Length > 0)
+        {
+            for (int i = 0; i < collsDetectados.Length; i++)
+            {
+                collsDetectados[i].GetComponent<FirstPerson>().RecibirDanho(danhoAtaque);
+            }
+            danhoRealizado = true;  
+        }
+    }
+    
+
+
+    //Evento de animacion
+    private void FinAtaque()
+    {
+        
+        agent.isStopped = false;
+        anim.SetBool("Atacking", false);
+        danhoRealizado = false;
+        
+    }
+
+    
+    private void AbrirVentanaAtaque()
+    {
+        ventanaAbierta = true;
+    }
+
+    private void CerrarVentanaAtaque()
+    {
+        ventanaAbierta = false;
+    }
+    
 }
