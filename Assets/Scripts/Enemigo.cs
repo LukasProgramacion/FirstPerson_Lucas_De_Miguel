@@ -39,8 +39,8 @@ public class Enemigo : MonoBehaviour
     {
         //Tengo que definir como destino la posicion del player
         agent.SetDestination(player.transform.position);
-
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        Debug.Log(player.name);
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
             agent.isStopped = true;
             anim.SetBool("Atacking", true);
@@ -73,7 +73,6 @@ public class Enemigo : MonoBehaviour
     //Evento de animacion
     private void FinAtaque()
     {
-        
         agent.isStopped = false;
         anim.SetBool("Atacking", false);
         danhoRealizado = false;
