@@ -23,6 +23,8 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private LayerMask queEsDanhable;
     private bool danhoRealizado;
 
+    [SerializeField] private float vidas;
+
 
     
     void Start()
@@ -68,6 +70,15 @@ public class Enemigo : MonoBehaviour
         }
     }
     
+    public void RecibirDanho (float danhoRecibido)
+    {
+        vidas -= danhoRecibido;
+
+        if (vidas <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
 
     //Evento de animacion

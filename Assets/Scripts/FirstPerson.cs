@@ -49,7 +49,7 @@ public class FirstPerson : MonoBehaviour
         Vector2 input = new Vector2(h, v).normalized;
 
         //cuerpo rota con camara
-        transform.eulerAngles = new Vector3 (0, Camera.main.transform.eulerAngles.y, 0);
+        transform.eulerAngles = new Vector3 (0, cam.transform.eulerAngles.y, 0);
 
         //Si existe input...
         if (input.sqrMagnitude > 0) 
