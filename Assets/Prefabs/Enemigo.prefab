@@ -2579,7 +2579,7 @@ MonoBehaviour:
   radioAtaque: 2
   queEsDanhable:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   vidas: 100
 --- !u!195 &5351642484921808485
 NavMeshAgent:
