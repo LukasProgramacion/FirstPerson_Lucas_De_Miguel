@@ -5,8 +5,10 @@ using UnityEngine;
 public class SistemaInteracciones : MonoBehaviour
 {
     private Camera cam;
+
     [SerializeField] private float distanciaInteraccion;
     private Transform interactuableActual;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,17 +20,22 @@ public class SistemaInteracciones : MonoBehaviour
     {
         if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hit, distanciaInteraccion))
         {
-            if(hit.transform.CompareTag("CajaMunicion"))
+            if(hit.transform.TryGetComponent(out CajaMunicion scriptCaja))
             {
                 //Activar outline de la caja.
                 interactuableActual = hit.transform;
                 interactuableActual.GetComponent<Outline>().enabled = true;
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    scriptCaja.Abrir();
+                }
             }
             
         }
         else if (interactuableActual)//Si tenia un interactuable
         {
-            //Lo apaago
+            //Lo apago
             interactuableActual.GetComponent<Outline>().enabled = false;
             //Lo anulo
             interactuableActual = null;
