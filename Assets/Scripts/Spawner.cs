@@ -11,12 +11,16 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(enemigoPrefab, puntosSpawn[0].position, Quaternion.identity);
+        StartCoroutine(Spawnear()); 
     }
+    
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator Spawnear ()
     {
-        
+        while(true)
+        {
+            Enemigo enemigoCopia = Instantiate(enemigoPrefab, puntosSpawn[Random.Range(0, puntosSpawn.Length)].position, Quaternion.identity);
+            yield return new WaitForSeconds(2);
+        }
     }
 }
