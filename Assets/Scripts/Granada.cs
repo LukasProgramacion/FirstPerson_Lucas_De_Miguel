@@ -39,7 +39,7 @@ public class Granada : MonoBehaviour
             foreach (Collider coll in collsDetectados)  
             {
                 coll.GetComponent<ParteDeEnemigo>().Explotar();
-                //coll.GetComponent<Rigidbody>.isKinematic = false;
+                coll.GetComponent<Rigidbody>().isKinematic = false;
                 coll.GetComponent<Rigidbody>().AddExplosionForce(80, transform.position, radioExplosion, 3.5f, ForceMode.Impulse);
             }
         }
