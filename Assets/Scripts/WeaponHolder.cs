@@ -11,10 +11,30 @@ public class WeaponHolder : MonoBehaviour
     void Start()
     {
         
+
+    }
+    private void Update()
+    {
+        CambiarArmaConRaton();
+        CambiarArmaConTeclado();
     }
 
     // Update is called once per frame
-    void Update()
+    private void CambiarArmaConRaton()
+    {
+        float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
+
+        if(scrollWheel > 0 ) // Anterior
+        {
+            CambiarArma(indiceArmaActual - 1);
+        }
+        else if(scrollWheel < 0 ) // Siguiente
+        {
+            CambiarArma(indiceArmaActual + 1);
+        }
+    }
+    
+    private void CambiarArmaConTeclado()
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -36,8 +56,15 @@ public class WeaponHolder : MonoBehaviour
 
     private void CambiarArma(int nuevoIndice)
     {
-        armas[indiceArmaActual].SetActive(false);
-        indiceArmaActual = nuevoIndice;
-        armas[indiceArmaActual].SetActive(true);
+        
+
+        //solo si es un indice valido puedo cambiar de arma
+        if(nuevoIndice >= 0 && nuevoIndice < armas.Length)
+        {
+            armas[indiceArmaActual].SetActive(false);
+            indiceArmaActual = nuevoIndice;
+            armas[indiceArmaActual].SetActive(true);
+        }
+        
     }
 }
