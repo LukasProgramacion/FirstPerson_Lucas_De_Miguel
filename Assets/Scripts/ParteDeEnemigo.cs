@@ -22,6 +22,7 @@ public class ParteDeEnemigo : MonoBehaviour
     {
         mainScript.GetComponent<Animator>().enabled = false;
         mainScript.GetComponent<NavMeshAgent>().enabled = false;
+        //aqui habia algo mas
        
     }
 }

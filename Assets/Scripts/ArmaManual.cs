@@ -27,7 +27,7 @@ public class ArmaManual : MonoBehaviour
                 // te dice el nobmre de lo q has tocado
                 if (hitInfo.transform.CompareTag("ParteEnemigo"))
                 {
-                    Debug.Log(hitInfo.transform.name);
+                    //Debug.Log(hitInfo.transform.name);
                     hitInfo.transform.GetComponent<ParteDeEnemigo>().RecibirDanho(misDatos.danhoAtaque);
                 }
                 
