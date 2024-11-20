@@ -135,10 +135,10 @@ MonoBehaviour:
   tiempoVida: 5
   explosionPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
     type: 3}
-  radioExplosion: 5
+  radioExplosion: 15
   queEsDanhable:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!54 &4694082323754451059
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -173,7 +173,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3358844503290456732}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3b7306033754bf44e81b2886604d642d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

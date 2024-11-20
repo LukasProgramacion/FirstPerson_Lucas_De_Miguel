@@ -52,6 +52,7 @@ public class Enemigo : MonoBehaviour
         {
             agent.isStopped = true;
             anim.SetBool("Atacking", true);
+            EnfocarPlayer();
         }
 
         if (ventanaAbierta && danhoRealizado == false)
@@ -61,6 +62,14 @@ public class Enemigo : MonoBehaviour
         
     }
 
+    private void EnfocarPlayer()
+    {
+        Vector3 direccionAPlayer = (player.transform.position - this.gameObject.transform.position).normalized;
+
+        direccionAPlayer.y = 0;
+
+        Quaternion.LookRotation(direccionAPlayer);
+    }
     
     private void DetectarJugador()
     {
