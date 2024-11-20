@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.VirtualTexturing;
+using UnityEngine.UI;
 
 public class ArmaAutomatica : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class ArmaAutomatica : MonoBehaviour
         cam = Camera.main;
 
         timer = misDatos.cadenciaAtaque;
+        
     }
 
     // Update is called once per frame
