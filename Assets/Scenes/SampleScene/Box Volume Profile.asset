@@ -73,10 +73,10 @@ MonoBehaviour:
     m_Value: 0.2
   xMultiplier:
     m_OverrideState: 1
-    m_Value: 0.509
+    m_Value: 0.1
   yMultiplier:
     m_OverrideState: 1
-    m_Value: 0.63
+    m_Value: 1
   center:
     m_OverrideState: 0
     m_Value: {x: 0.5, y: 0.5}
