@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ParteEnemigo
   - CajaMunicion
+  - Granada
   layers:
   - Default
   - TransparentFX

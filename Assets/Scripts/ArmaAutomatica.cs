@@ -13,6 +13,8 @@ public class ArmaAutomatica : MonoBehaviour
     private Camera cam;
 
     private float timer;
+
+    public Granada granada;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,16 @@ public class ArmaAutomatica : MonoBehaviour
                     hitInfo.transform.GetComponent<ParteDeEnemigo>().RecibirDanho(misDatos.danhoAtaque);
                 }
 
+            }
+
+            if (hitInfo.transform.CompareTag("Granada"))
+            {
+                Granada granada = hitInfo.transform.GetComponent<Granada>();
+                if (granada != null)
+                {
+                    granada.Explotar();
+                    Destroy(granada.gameObject);
+                }
             }
 
             timer = 0;

@@ -29,14 +29,19 @@ public class Granada : MonoBehaviour
 
     private void OnDestroy()
     {
+        Explotar();
+    }
+
+    public void Explotar()
+    {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
-        
+
         Collider[] collsDetectados = Physics.OverlapSphere(transform.position, radioExplosion, queEsDanhable);
 
-        if (collsDetectados.Length > 0 )
+        if (collsDetectados.Length > 0)
         {
-            foreach (Collider coll in collsDetectados)  
+            foreach (Collider coll in collsDetectados)
             {
                 coll.GetComponent<ParteDeEnemigo>().Explotar();
                 coll.GetComponent<Rigidbody>().isKinematic = false;
@@ -44,4 +49,7 @@ public class Granada : MonoBehaviour
             }
         }
     }
+
 }
+
+

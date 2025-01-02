@@ -8,6 +8,8 @@ public class ArmaManual : MonoBehaviour
     [SerializeField] ParticleSystem system;
 
     private Camera cam;
+
+    public Granada granada;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,16 @@ public class ArmaManual : MonoBehaviour
                     //Debug.Log(hitInfo.transform.name);
                     hitInfo.transform.GetComponent<ParteDeEnemigo>().RecibirDanho(misDatos.danhoAtaque);
                 }
+                if (hitInfo.transform.CompareTag("Granada"))
+                {
+                    Granada granada = hitInfo.transform.GetComponent<Granada>();
+                    if (granada != null)
+                    {
+                        granada.Explotar(); 
+                        Destroy(granada.gameObject); 
+                    }
+                }
+
                 
             }
         }
