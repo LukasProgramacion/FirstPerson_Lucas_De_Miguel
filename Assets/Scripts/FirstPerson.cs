@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FirstPerson : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class FirstPerson : MonoBehaviour
     
 
     private CharacterController controller;
+
+    [SerializeField] TMP_Text textoMunicion;
+    [SerializeField] TMP_Text textoMunicionM4;
+    [SerializeField] ArmaSO misDatos;
+    [SerializeField] ArmaSO misDatosM4;
 
 
     private Camera cam;
@@ -28,6 +34,9 @@ public class FirstPerson : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        misDatos.balasCargador = 10;
+        misDatosM4.balasCargador = 60;
+
         controller = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -41,6 +50,7 @@ public class FirstPerson : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
@@ -65,6 +75,8 @@ public class FirstPerson : MonoBehaviour
         AplicarGravedad();
         DeteccionSuelo();
         
+        textoMunicion.SetText("Municion pistola: " + misDatos.balasCargador);
+        textoMunicionM4.SetText("Municion m4: " + misDatosM4.balasCargador);
     }
 
     private void AplicarGravedad()

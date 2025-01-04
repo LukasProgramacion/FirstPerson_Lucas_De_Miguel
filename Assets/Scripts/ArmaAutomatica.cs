@@ -9,6 +9,7 @@ public class ArmaAutomatica : MonoBehaviour
     [SerializeField] private ParticleSystem system;
 
     [SerializeField] private ArmaSO misDatos;
+    [SerializeField] ArmaSO misDatosM4;
 
     private Camera cam;
 
@@ -29,7 +30,7 @@ public class ArmaAutomatica : MonoBehaviour
     {
         timer += 1 * Time.deltaTime;
 
-        if(Input.GetMouseButton(0) && timer >= misDatos.cadenciaAtaque)
+        if(Input.GetMouseButton(0) && timer >= misDatos.cadenciaAtaque /* misDatosM4.balasCargador > 0f*/)
         {
             system.Play();
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, misDatos.distanciaAtaque))
@@ -37,6 +38,7 @@ public class ArmaAutomatica : MonoBehaviour
                 // te dice el nobmre de lo q has tocado
                 if (hitInfo.transform.CompareTag("ParteEnemigo"))
                 {
+                    misDatosM4.balasCargador--;
                     //Debug.Log(hitInfo.transform.name);
                     hitInfo.transform.GetComponent<ParteDeEnemigo>().RecibirDanho(misDatos.danhoAtaque);
                 }
@@ -48,6 +50,7 @@ public class ArmaAutomatica : MonoBehaviour
                 Granada granada = hitInfo.transform.GetComponent<Granada>();
                 if (granada != null)
                 {
+                    misDatosM4.balasCargador--;
                     granada.Explotar();
                     Destroy(granada.gameObject);
                 }

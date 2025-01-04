@@ -6,8 +6,12 @@ public class SistemaInteracciones : MonoBehaviour
 {
     private Camera cam;
 
+    [SerializeField] ArmaSO misDatos;
+    [SerializeField] ArmaSO misDatosM4;
+
     [SerializeField] private float distanciaInteraccion;
     private Transform interactuableActual;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +33,9 @@ public class SistemaInteracciones : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     scriptCaja.Abrir();
+                    misDatos.balasCargador+= 15;
+                    misDatosM4.balasCargador += 30;
+
                 }
             }
             
