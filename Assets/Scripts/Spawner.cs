@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
         while(true)
         {
             Enemigo enemigoCopia = Instantiate(enemigoPrefab, puntosSpawn[Random.Range(0, puntosSpawn.Length)].position, Quaternion.identity);
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1.2f);
         }
     }
 }

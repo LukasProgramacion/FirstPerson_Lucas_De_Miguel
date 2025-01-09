@@ -8,6 +8,8 @@ public class ArmaManual : MonoBehaviour
     [SerializeField] ArmaSO misDatos;
     [SerializeField] ParticleSystem system;
 
+    [SerializeField] AudioClip sonidoDisparoPistola;
+    [SerializeField] AudioManager manager;
     
 
     private Camera cam;
@@ -28,6 +30,7 @@ public class ArmaManual : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && misDatos.balasCargador > 0f)
         {
             misDatos.balasCargador--;
+            manager.SonidoPistola(sonidoDisparoPistola);
             system.Play();
             if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, misDatos.distanciaAtaque))
             {
