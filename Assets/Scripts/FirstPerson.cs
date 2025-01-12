@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class FirstPerson : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class FirstPerson : MonoBehaviour
     [SerializeField] ArmaSO misDatos;
     [SerializeField] ArmaSO misDatosM4;
 
+    [SerializeField] TMP_Text textoVida;
 
     private Camera cam;
 
@@ -77,6 +79,7 @@ public class FirstPerson : MonoBehaviour
         
         textoMunicion.SetText("Municion pistola: " + misDatos.balasCargador);
         textoMunicionM4.SetText("Municion m4: " + misDatosM4.balasCargador);
+        textoVida.SetText("Vida: " + vidas);
     }
 
     private void AplicarGravedad()
@@ -127,6 +130,15 @@ public class FirstPerson : MonoBehaviour
         if(vidas <= 0)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene(3);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Caja Final")
+        {
+            SceneManager.LoadScene(4);
         }
     }
 

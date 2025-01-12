@@ -13234,8 +13234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -122.4}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 142.89508, y: -190}
+  m_SizeDelta: {x: 285.7902, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &869270237
 MonoBehaviour:
@@ -13259,8 +13259,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Municion m4: 000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: debe894442e153d479c7f9d07cce1276, type: 2}
+  m_sharedMaterial: {fileID: 21975412471922176, guid: debe894442e153d479c7f9d07cce1276,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13284,7 +13285,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.8
+  m_fontSize: 34.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15707,15 +15708,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Vida: 000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: debe894442e153d479c7f9d07cce1276, type: 2}
+  m_sharedMaterial: {fileID: 21975412471922176, guid: debe894442e153d479c7f9d07cce1276,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15732,7 +15734,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 41.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -21891,8 +21893,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -89}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 158.3357, y: -89}
+  m_SizeDelta: {x: 316.6714, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2077318343
 MonoBehaviour:
@@ -21916,8 +21918,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Municion pistola: 000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: debe894442e153d479c7f9d07cce1276, type: 2}
+  m_sharedMaterial: {fileID: 21975412471922176, guid: debe894442e153d479c7f9d07cce1276,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21941,7 +21944,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.45
+  m_fontSize: 31.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -22254,22 +22257,22 @@ PrefabInstance:
     - target: {fileID: 160611791772872853, guid: 1cf3741783842304cbc612a3a1d634f6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.78
+      value: 222.28
       objectReference: {fileID: 0}
     - target: {fileID: 160611791772872853, guid: 1cf3741783842304cbc612a3a1d634f6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 109.47
+      value: 141.81
       objectReference: {fileID: 0}
     - target: {fileID: 160611791772872853, guid: 1cf3741783842304cbc612a3a1d634f6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.35
+      value: 341.39
       objectReference: {fileID: 0}
     - target: {fileID: 160611791772872853, guid: 1cf3741783842304cbc612a3a1d634f6,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9386461
+      value: 0.6083666
       objectReference: {fileID: 0}
     - target: {fileID: 160611791772872853, guid: 1cf3741783842304cbc612a3a1d634f6,
         type: 3}
@@ -22279,7 +22282,7 @@ PrefabInstance:
     - target: {fileID: 160611791772872853, guid: 1cf3741783842304cbc612a3a1d634f6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.34488192
+      value: -0.79365623
       objectReference: {fileID: 0}
     - target: {fileID: 160611791772872853, guid: 1cf3741783842304cbc612a3a1d634f6,
         type: 3}
@@ -22294,7 +22297,7 @@ PrefabInstance:
     - target: {fileID: 160611791772872853, guid: 1cf3741783842304cbc612a3a1d634f6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 40.349
+      value: -105.057
       objectReference: {fileID: 0}
     - target: {fileID: 160611791772872853, guid: 1cf3741783842304cbc612a3a1d634f6,
         type: 3}
@@ -22327,6 +22330,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 078ee253c1213cd45b10ded8ca6ee93a,
         type: 2}
+    - target: {fileID: 3127048705906182669, guid: 1cf3741783842304cbc612a3a1d634f6,
+        type: 3}
+      propertyPath: textoVida
+      value: 
+      objectReference: {fileID: 1509308684}
     - target: {fileID: 3127048705906182669, guid: 1cf3741783842304cbc612a3a1d634f6,
         type: 3}
       propertyPath: misDatosM4

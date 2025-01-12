@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Menu Principal.unity
+    guid: 47a1be51b262d3346a6e01ddcb9b8055
+  - enabled: 1
+    path: Assets/Scenes/Lore.unity
+    guid: fc485a89c73fc7a41bb2401e13b494c6
+  - enabled: 1
+    path: Assets/Scenes/Derrota.unity
+    guid: f4dc64009c7d4ff4ba1c2d2fc2efe129
+  - enabled: 1
+    path: Assets/Scenes/Victoria.unity
+    guid: 399b00aece4a9c9409bef3cea26cfb2e
   m_configObjects: {}
