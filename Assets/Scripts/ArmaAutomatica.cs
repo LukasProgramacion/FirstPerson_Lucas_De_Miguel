@@ -37,7 +37,7 @@ public class ArmaAutomatica : MonoBehaviour
         {
             system.Play();
             misDatosM4.balasCargador--;
-            manager.SonidoM4(sonidoDisparoM4);
+            AudioManager.Instance.EjecutarSonido(sonidoDisparoM4);
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, misDatos.distanciaAtaque))
             {
                 // te dice el nobmre de lo q has tocado

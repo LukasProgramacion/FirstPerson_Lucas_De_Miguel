@@ -30,7 +30,7 @@ public class ArmaManual : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && misDatos.balasCargador > 0f)
         {
             misDatos.balasCargador--;
-            manager.SonidoPistola(sonidoDisparoPistola);
+            manager.EjecutarSonido(sonidoDisparoPistola);
             system.Play();
             if(Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, misDatos.distanciaAtaque))
             {

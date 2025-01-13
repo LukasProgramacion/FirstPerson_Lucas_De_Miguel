@@ -4,31 +4,25 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource SFXSonidoPistola;
-    [SerializeField] AudioSource SFXSonidoM4;
-    [SerializeField] AudioSource SFXGranada;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] AudioSource SFXSource;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void SonidoPistola (AudioClip clip)
-    {
-        SFXSonidoPistola.PlayOneShot(clip);
-    }
 
-    public void SonidoM4 (AudioClip clip)
+    public static AudioManager Instance;
+
+    private void Awake()
     {
-        SFXSonidoM4.PlayOneShot(clip);
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if(Instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
-    public void SonidoGranada (AudioClip clip)
+    public void EjecutarSonido (AudioClip clip)
     {
-        SFXGranada.PlayOneShot(clip);
+        SFXSource.PlayOneShot(clip);
     }
 }
