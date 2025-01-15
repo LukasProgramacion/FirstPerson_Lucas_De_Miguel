@@ -455,7 +455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -105.34967, y: -4.452423}
+  m_AnchoredPosition: {x: -105.34961, y: -4.4524536}
   m_SizeDelta: {x: 667.198, y: 862.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &371927742
@@ -1043,7 +1043,11 @@ MonoBehaviour:
     a investigar.
 
 
-    BUENA SUERTE.'
+    Para encontrarlo, primero sigue las farolas.
+
+
+    BUENA
+    SUERTE.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 59ee34472c5892a4196858080cc2141e, type: 2}
   m_sharedMaterial: {fileID: -7472687217148228796, guid: 59ee34472c5892a4196858080cc2141e,
