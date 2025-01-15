@@ -8,6 +8,7 @@ public class SistemaInteracciones : MonoBehaviour
 
     [SerializeField] ArmaSO misDatos;
     [SerializeField] ArmaSO misDatosM4;
+    private bool cajaUsada = false;
 
     [SerializeField] private float distanciaInteraccion;
     private Transform interactuableActual;
@@ -30,13 +31,24 @@ public class SistemaInteracciones : MonoBehaviour
                 interactuableActual = hit.transform;
                 interactuableActual.GetComponent<Outline>().enabled = true;
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) && cajaUsada == false)
                 {
                     scriptCaja.Abrir();
                     misDatos.balasCargador+= 15;
                     misDatosM4.balasCargador += 30;
+                    cajaUsada=true;
 
                 }
+                else if (misDatos.balasCargador >= 80)
+                {
+                    misDatos.balasCargador += 0;
+                }
+                else if (misDatosM4.balasCargador >= 160)
+                {
+                    misDatosM4.balasCargador += 0;
+                }
+
+                 
             }
             
         }
